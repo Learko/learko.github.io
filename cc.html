@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Climate Change</title>
+
+    <meta name="author" content="Anton Matveev">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Hightcharts -->
+    <script src="highcharts/highcharts.js"></script>
+    <script src="highcharts/highcharts-3d.js"></script>
+    <script src="highcharts/modules/exporting.js"></script>
+    <script src="highcharts/modules/export-data.js"></script>
+
+    <!-- Chart.js -->
+    <script src="chartjs/chart.bundle.min.js"></script>
+    <script src="chartjs/utils.js"></script>
+
+    <style type="text/css">
+        .reveal h3 {
+            margin-bottom: 70px;
+        }
+
+        .reveal section img {
+            background: none;
+            border: none;
+            box-shadow: none;
+            max-height: calc(66vh);
+            max-width: calc(66vw);
+        }
+
+        .reveal .slides section .fragment.fade-in-then-semi-out.visible {
+            opacity: 0.7;
+            visibility: inherit;
+        }
+
+        .reveal .slides section .fragment.fade-in-then-semi-out.current-fragment {
+            opacity: 1;
+            visibility: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h2>Why does the climate change?</h2>
+                <p style="text-transform: capitalize;">English for international conferences.</p>
+                <p><small>Nov 24, 2018.</small></p>
+                <div style="float: right;">
+                    <p align="left" >
+                        <small>
+                            Alena Doronina <br>
+                            Anton Matveev <br>
+                            Bich Ngoc <br>
+                            Maria Kiseleva <br>
+                            Polina Solodovnikova <br>
+                            Yulia Putintseva <br>
+                        </small>
+                    </p>
+                </div>
+
+                <aside class="notes">
+                    <small>
+Hi, thanks for coming, I'm Anton Matveev. And I, along with other people whose names you can see on the slide, am a student at Ural State University. <br>
+And today I'd like to give you some food for thought on one very important, in my opinion, topic. <br>
+Let's not waste anyone's precious time. <br>
+<br>
+Why does the climate change? <br>
+<br>
+I think we all heard about climate change at some point, right? But what does that mean? And why should we care? <br>
+<br>
+To answer these question let's take a look at any recent event related to climate.
+                    </small>
+                </aside>
+            </section>
+
+            <section>
+                <img class="fragment fade-in-then-semi-out current-visible stretch" src="img/hurricane.jpg" style="position: absolute; top: 0; left: 5%;">
+                <img class="fragment fade-in-then-semi-out current-visible stretch" src="img/flood.jpg" style="position: absolute; top: 50%; right: 5%;">
+                <img class="fragment fade-in-then-semi-out current-visible stretch" src="img/iceberg.jpg" style="position: absolute; top: 50%; left: 10%;">
+                <img class="fragment fade-in-then-semi-out current-visible stretch" src="img/drought.jpg" style="position: absolute; top: 5%; right: 10%;">
+
+                <aside class="notes">
+                    <small>
+Hurricanes and floods are more and more frequent, icebergs are melting, acrobatic diving becoming less and less popular among penguins. Almost every year some part of Earth once prospered and thrived becoming uninhabited, abandoned because of droughts. <br>
+<br>
+But why does this actually happening? Well, there're a few reasons.<br>
+                    </small>
+                </aside>
+            </section>
+
+            <section data-state="stacked_area_event">
+                <h3 style="text-transform: none;">CO₂e emissions per year.</h3>
+
+                <div style="height: 400px;">
+                    <canvas id="stacked_area"></canvas>
+                </div>
+
+                <aside class="notes">
+                    <small>
+And one of the most important of them is so called Greenhouse effect. <br>
+Let me explain it to you: <br>
+When the sunlight reaches Earth's surface it can be either reflected back into space or absorbed by Earth. <br>
+Once absorbed, the planet releases some energy back to the atmosphere as heat. <br>
+<br>
+The greenhouse gases like carbon dioxide, or water vapor, absorb this energy, slowing or preventing the loss of heat to space. <br>
+Therefore making Earth warmer that it would be otherwise. <br>
+<br>
+Some of these emissions are caused by nature, volcanic eruptions, for instance, and, as you can see on this slide, they have been here since the beginning. For a very long time emission level has been the same, but I want you to notice this rapid increase in recent years. <br>
+<br>
+In 19th century happened so called "Industrial Revolution", which is basically means global electrification. At that time no one would've thought that burning of fossil fuels would have almost immediate effect on the climate. <br>
+Happen this revolution a few years earlier, and who knows, maybe the story of Titanic wouldn't be so dramatic. <br>
+<br>
+Ok, let's take a look at where we're now. <br>
+                    </small>
+                </aside>
+            </section>
+
+            <section data-state="pie_chart_event">
+                <h3 style="text-transform: none;">CO₂e emissions by source.</h3>
+
+                <div id="pie_chart" style="height: 400px;"></div>
+
+                <aside class="notes">
+                    <small>
+As I mentioned earlier fossil fuels are the problem, in fact, producing electricity and heat using these fuels is the reason of a half carbon dioxide in the atmosphere. <br>
+For every tonne of coal burned, 2.5 tonnes of carbon dioxide being released. <br>
+<br>
+What conclusion can we draw from this?<br>
+Well, as someone said: "First step in solving any problem is recognizing there's one". <br>
+Yes, we as individuals can't make a significant impact on overall situation. But there're small things each of us can do. <br>
+I'm not implying anything, but 24% of these emissions are caused by your cars. <br>
+You can water the flowers in your house at the very least. <br>
+Current industry leaders understand this problem too, and actually slowly giving up fossil fuels, and replacing them with different sources of energy, renewable sources, like solar or wind. It’s not reducing the amount of emissions we have in the atmosphere now, but at least we’re not producing them at this rate. <br>
+                    </small>
+                </aside>
+            </section>
+
+            <section>
+                <h2 style="text-transform: none;">Thanks for your attention!</h2>
+
+                <aside class="notes">
+                    <small>
+Thank you for your attention, that's all I wanted to say today, if you have any questions - now is the time. <br>
+                    </small>
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+            controls: false,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'none', // none/fade/slide/convex/concave/zoom
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/search/search.js', async: true },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+
+        Reveal.addEventListener('stacked_area_event', function() {
+            new Chart('stacked_area', {
+                type: 'line',
+                data: {
+                    labels: years,
+                    datasets: [{
+                        // backgroundColor: Samples.utils.transparentize(window.chartColors.red),
+                        backgroundColor: 'rgb(144, 237, 125)',
+                        borderColor: window.chartColors.red,
+                        data: dataset,
+                        fill: 'start',
+                        pointBackgroundColor: window.chartColors.red,
+                        pointHoverRadius: 3
+                    }]
+                },
+                options: {
+                    title: {
+                        display: false
+                    },
+                    legend: {
+                        display: false
+                    },
+                    maintainAspectRatio: false,
+                    spanGaps: true,
+                    elements: {
+                        line: {
+                            tension: 0.000001
+                        },
+                        point: {
+                            radius: 0
+                        }
+                    },
+                    plugins: {
+                        filler: {
+                            propagate: false
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                autoSkip: true,
+                                maxTicksLimit: 20,
+                                maxRotation: 0,
+                                fontColor: 'rgba(0, 0, 0, 0.8)'
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Year',
+                                fontSize: 20,
+                                fontColor: 'rgba(0, 0, 0, 0.8)'
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 14,
+                                fontColor: 'rgba(0, 0, 0, 0.8)',
+                                callback: function(label, index, labels) {
+                                    return label + ' million tonnes';
+                                }
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'CO₂e emissions',
+                                fontSize: 20,
+                                fontColor: 'rgba(0, 0, 0, 0.8)'
+                            }
+                        }]
+                    }
+                }
+            });
+        }, false);
+
+        Reveal.addEventListener('pie_chart_event', function() {
+            Highcharts.chart('pie_chart', {
+                chart: {
+                    type: 'pie',
+                    options3d: {
+                        enabled: true,
+                        alpha: 45
+                    }
+                },
+                credits: false,
+                exporting: { enabled: false },
+                tooltip: { enabled: false },
+                title: {
+                    // text: 'CO₂e emissions by source.'
+                    text: ''
+                },
+                subtitle: {
+                    text: '',
+                },
+                plotOptions: {
+                    pie: {
+                        innerSize: 100,
+                        depth: 45,
+                        dataLabels: {
+                            enabled: true,
+                            style: { fontSize: '17px' },
+                            format: '{point.name}: {point.y:.0f}%'
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Part',
+                    data: [
+                        ['Electricity', 28],
+                        ['Transportation', 28],
+                        ['Industry', 22],
+                        ['Commercial & Residential', 11],
+                        ['Agriculture', 9]
+                    ],
+                    animation: {
+                        duration: 370
+                    }
+                }]
+            });
+        }, false);
+    </script>
+
+    <!-- I'm so sorry. -->
+    <script type="text/javascript">
+        var years = ['0', '20', '40', '60', '80', '100', '120', '140', '160', '180', '200', '220', '240', '260', '280', '300', '320', '340', '360', '380', '400', '420', '440', '460', '480', '500', '520', '540', '560', '580', '600', '620', '640', '660', '680', '700', '720', '740', '760', '780', '800', '820', '840', '860', '880', '900', '920', '940', '960', '980', '1000', '1020', '1040', '1060', '1080', '1100', '1120', '1140', '1160', '1180', '1200', '1220', '1240', '1260', '1280', '1300', '1320', '1340', '1360', '1380', '1400', '1420', '1440', '1460', '1480', '1500', '1520', '1540', '1560', '1580', '1600', '1620', '1640', '1660', '1680', '1700', '1720', '1740', '1760', '1780', '1800', '1820', '1840', '1860', '1880', '1900', '1920', '1940', '1960', '1980', '2000', '2014'];
+        var dataset = [277.454, 277.232, 277.325, 277.397, 277.477, 277.62, 277.733, 277.832, 278.029, 278.404, 278.877, 279.404, 279.825, 280.059, 280.213, 280.209, 280.125, 279.919, 279.559, 279.137, 278.864, 278.692, 278.268, 277.883, 277.48, 277.206, 277.015, 277.074, 277.132, 277.198, 277.508, 277.873, 278.222, 278.479, 278.674, 278.861, 279.025, 279.137, 279.288, 279.343, 279.274, 279.324, 279.334, 279.351, 279.224, 279.021, 278.817, 278.63, 278.757, 279.008, 279.404, 279.949, 280.71, 281.601, 282.35, 282.969, 283.473, 283.893, 284.164, 284.156, 283.726, 283.256, 282.79, 282.173, 281.781, 281.542, 281.259, 281.139, 280.921, 280.638, 280.445, 280.272, 280.579, 281.16, 281.877, 282.996, 283.559, 283.311, 282.147, 280.48, 278.376, 277.219, 276.49, 276.308, 276.505, 276.746, 276.695, 276.855, 277.605, 279.054, 280.834, 282.346, 283.382, 285.739, 289.47, 295.675, 304.246, 311.357, 316.625, 338.7049, 369.125, 397.547];
+    </script>
+
+</body>
+</html>
